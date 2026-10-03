@@ -16,5 +16,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`htpp://locahost:${PORT}`)
+  console.log(`http://localhost:${PORT}`)
 })
