@@ -1,0 +1,272 @@
+/* ===== Variables: paleta azul y gris ===== */
+:root {
+    --azul-900: #1e3a5f;
+    --azul-700: #1d4ed8;
+    --azul-600: #2563eb;
+    --azul-500: #3b82f6;
+    --azul-100: #dbeafe;
+    --azul-50:  #eff6ff;
+
+    --gris-900: #1f2937;
+    --gris-700: #374151;
+    --gris-500: #6b7280;
+    --gris-300: #d1d5db;
+    --gris-200: #e5e7eb;
+    --gris-100: #f3f4f6;
+
+    --blanco: #ffffff;
+    --peligro: #dc2626;
+    --radio: 8px;
+    --sombra: 0 2px 8px rgba(30, 58, 95, 0.12);
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    color: var(--gris-900);
+    background: var(--gris-100);
+    line-height: 1.5;
+}
+
+h1, h2 {
+    color: var(--azul-900);
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--azul-500);
+}
+
+h2 {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+}
+
+/* ===== Enlaces (menú) ===== */
+a {
+    display: inline-block;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    padding: 0.5rem 1rem;
+    color: var(--blanco);
+    background: var(--azul-600);
+    border-radius: var(--radio);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+a:hover {
+    background: var(--azul-700);
+}
+
+/* Botón para volver al menú */
+a.btn-volver {
+    margin: 0 0 1.5rem;
+    color: var(--azul-900);
+    background: var(--blanco);
+    border: 1px solid var(--gris-300);
+}
+
+a.btn-volver:hover {
+    color: var(--blanco);
+    background: var(--gris-700);
+    border-color: var(--gris-700);
+}
+
+/* ===== Menú principal (index) ===== */
+.menu {
+    padding-top: 3rem;
+}
+
+.menu header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.menu h1 {
+    margin-bottom: 0.25rem;
+    font-size: 2.2rem;
+    border: none;
+}
+
+.menu header p {
+    margin: 0;
+    color: var(--gris-500);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta {
+    padding: 1.5rem;
+    background: var(--blanco);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+
+.tarjeta h2 {
+    margin: 0 0 1rem;
+    font-size: 1.3rem;
+}
+
+.tarjeta a {
+    display: block;
+    margin: 0 0 0.6rem;
+    text-align: center;
+}
+
+.tarjeta a.btn-secundario {
+    color: var(--azul-700);
+    background: var(--azul-50);
+    border: 1px solid var(--azul-100);
+}
+
+.tarjeta a.btn-secundario:hover {
+    color: var(--blanco);
+    background: var(--azul-600);
+}
+
+/* ===== Tablas ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    background: var(--blanco);
+    border-radius: var(--radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+thead {
+    background: var(--azul-900);
+    color: var(--blanco);
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid var(--gris-200);
+}
+
+th {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background: var(--gris-100);
+}
+
+tbody tr:hover {
+    background: var(--azul-50);
+}
+
+/* ===== Formularios ===== */
+form {
+    padding: 1.5rem;
+    background: var(--blanco);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    max-width: 500px;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: var(--gris-700);
+}
+
+input {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    font-size: 1rem;
+    color: var(--gris-900);
+    background: var(--blanco);
+    border: 1px solid var(--gris-300);
+    border-radius: var(--radio);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--azul-500);
+    box-shadow: 0 0 0 3px var(--azul-100);
+}
+
+/* ===== Vistas de registro: título y formulario centrados ===== */
+.registro h1 {
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+}
+
+.registro form {
+    margin: 0 auto;
+}
+
+/* ===== Botones ===== */
+button {
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+form button[type="submit"] {
+    padding: 0.6rem 1.5rem;
+    color: var(--blanco);
+    background: var(--azul-600);
+    border: none;
+    border-radius: var(--radio);
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+form button[type="submit"]:hover {
+    background: var(--azul-700);
+}
+
+/* Botones de iconos (editar / eliminar) dentro de las tablas */
+td button {
+    padding: 0.35rem;
+    margin-right: 0.25rem;
+    line-height: 0;
+    color: var(--gris-500);
+    background: transparent;
+    border: 1px solid var(--gris-300);
+    border-radius: 6px;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+td button:hover {
+    background: var(--azul-100);
+    border-color: var(--azul-500);
+    color: var(--azul-700);
+}
+
+td button[data-action="delete"]:hover {
+    background: #fee2e2;
+    border-color: var(--peligro);
+    color: var(--peligro);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
