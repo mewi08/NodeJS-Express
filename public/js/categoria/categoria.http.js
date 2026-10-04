@@ -9,5 +9,13 @@ export const categoriaApi = {
         return res.data;
     },
 
+    async crearCategoria(data){
+        const res = await api.post('categorias', data);
+        if(!res.success){
+            throw new Error(res.message);
+        }
+        return res.data;
+    },
+
 }
 
