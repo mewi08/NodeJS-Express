@@ -11,6 +11,9 @@ app.use(express.json());
 app.use('/api/categorias', require('./src/routers/categoria.routes'));
 app.use('/api/activos', require('./src/routers/activo.routes'));
 
+//Para servir archivos estaticos
+app.use(express.static('public'));
+
 app.get("/", (req, res) => {
   res.send("API de logistica funcionando correctamente")
 });
